@@ -1,0 +1,254 @@
+main {
+    width: 890px;
+    height: 280px;
+    border: 2px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+main .left-top {
+    width: 442px;
+    height: 140px;
+    background-color: #dd4838;
+}
+
+main .left-bottom {
+    width: 442px;
+    height: 137px;
+    background-color: #e84c3c;
+} 
+
+main .right-top {
+    width: 446px;
+    height: 141px;
+    background-color: #e84c3c;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+main .right-bottom {
+    width: 446px;
+    height: 137px;
+    background-color: #dd4838;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+} 
+
+.left-top .wraper {
+    position: relative;
+    width: 120px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-top .cube {
+    width: 120px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+.left-top .loader-top {
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    top: 0;
+    background-color: white;
+    animation: load1 5s ease-in-out 2s infinite; 
+}
+
+.left-top .loader-bottom {
+    width: 120px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 16px;
+    animation: load1 5s ease-in-out 2s infinite;
+}
+
+@keyframes load1 {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+.right-top .wraper {
+    position: relative;
+    width: 120px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.cube {
+    width: 120px;
+    height: 18px;
+    background-color: rgba(250, 250, 250, 0.6);
+    color: white;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cube .loader {
+    width: 120px;
+    height: 18px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    animation: load2 5s ease-in-out 2s infinite;
+}
+
+@keyframes load2 {
+    0% {
+        left: -150px;  
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.left-bottom .dot1 {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(250, 250, 250, 0.6);
+    border-radius: 50%;
+    opacity: 0.8;
+    margin: 5px;
+}
+
+.left-bottom .dot2 {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.left-bottom .dot3 {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(250, 250, 250, 0.6);
+    border-radius: 50%;
+    opacity: 0.8;
+    margin: 5px;
+}
+
+.dots {
+    position: absolute;
+    margin: 10px;
+    display: flex;
+    bottom: 50px;
+    left: 180px;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+.right-bottom .wraper {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right-bottom .cube {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+}
+
+.right-bottom .cube .loader {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: -37px;
+    animation: load3 5s ease-in-out 2s infinite;
+}
+
+.right-bottom .ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ball 2s linear infinite;
+}
+
+@keyframes ball {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 40px;
+    }
+    50% {
+        top: 40px;
+        left: 40px;
+    }
+    75% {
+        top: 40px;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes load3 {
+    0% {
+        left: -37px;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+
+
